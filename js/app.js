@@ -1,14 +1,20 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Router, Route, Link, browserHistory } from 'react-router'
-import Index from './components/Index.js';
+import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
+import Home from './components/Home.js';
+import Me from './components/Me.js';
 
-class App extends React.Component {
+export class App extends React.Component {
   render() {
     return (
-      <div className="nav">
-        <Link to="app">Home</Link>
-        <Link to="index">Index</Link>
+      <div>
+        <ul className="nav">
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="me">Me</Link></li>
+        </ul>
+
+        {this.props.children}
+
       </div>
     );
   }
@@ -17,7 +23,8 @@ class App extends React.Component {
 render((
   <Router history={browserHistory}>
     <Route path="/" component={App}>
-      <Route path="/index" component={Index}/>
+      <IndexRoute component={Home} />
+      <Route path="/me" component={Me} />
     </Route>
   </Router>
 ), document.getElementById('root'))
