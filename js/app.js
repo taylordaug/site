@@ -8,10 +8,12 @@ export class App extends React.Component {
   render() {
     return (
       <div>
-        <ul className="nav">
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="me">Me</Link></li>
-        </ul>
+        <nav>
+          <ul className="nav">
+            <li><Link to="/">Home</Link></li>
+            <li><Link to="me">Me</Link></li>
+          </ul>
+        </nav>
 
         {this.props.children}
 
