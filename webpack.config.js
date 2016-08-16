@@ -15,7 +15,8 @@ module.exports = {
             exclude: /node_modules/,
           },
           { test: /\.js$/, exclude: /node_modules/, loader: 'babel?presets[]=react,presets[]=es2015'},
-          { test: /\.css$/, loader: "style!css" }
+          { test: /\.css$/, loader: "style!css" },
+          { test: /\.(png|jpg|gif)$/, loader: "file-loader?name=img/img-[hash:6].[ext]" }
       ]
   },
   plugins: [
