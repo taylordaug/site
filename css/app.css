@@ -1,7 +1,21 @@
-html {
+body {
   background: url("../images/vwbeach.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  opacity: 0.25;
+}
+
+.navbar-brand {
+  width: 70%;
+  height: 20px;
+}
+
+a.navbar-nav {
+  color: white !important!;
+}
+
+.navbar-default {
+  background-color: transparent;
 }
