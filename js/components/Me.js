@@ -2,7 +2,11 @@ import React from 'react'
 
 export class Me extends React.Component {
   render() {
-    return (<div>Hello</div>)
+    var imgUrl = '../images/umbrellas.jpg'
+    var divStyle = {
+      backgroundImage: "url(('+ imgUrl +')"
+    }
+    return (<div style={divStyle}>Hello</div>)
   }
 }
 

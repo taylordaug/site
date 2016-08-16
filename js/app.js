@@ -9,19 +9,38 @@ export class App extends React.Component {
     return (
       <div>
         <nav className="navbar navbar-default">
-          <div className="navbar-header">
-            <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-              <span className="sr-only">Toggle navigation</span>
-              <span className="icon-bar">Home</span>
-              <span className="icon-bar">Me</span>
-              <span className="icon-bar">Portfolio</span>
-            </button>
-            <a className="navbar-brand" href="#">Brand</a>
+          <div className="container-fluid">
+
+            <div className="navbar-header">
+              <button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span className="sr-only"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+                <span className="icon-bar"></span>
+              </button>
+              <Link to="/" className="navbar-brand">
+                <img className="logo" alt='taylor-daugherty' src={require('./../images/Logo.png')}/>
+              </Link>
+            </div>
+
+            <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul className="nav navbar-nav navbar-right">
+                <li className="active"><Link to="/">home<span className="sr-only">(current)</span></Link></li>
+                <li><Link to="/me">me</Link></li>
+                <li className="dropdown">
+                  <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">portfolio <span className="caret"></span></a>
+                  <ul className="dropdown-menu">
+                    <li><Link to="/">project 1</Link></li>
+                    <li><Link to="/">project 2</Link></li>
+                    <li><Link to="/">project 3</Link></li>
+                  </ul>
+                </li>
+                <li role="separator" className="divider"></li>
+                <li><Link to="/contact">contact</Link></li>
+              </ul>
+
+            </div>
           </div>
-          <ul className="nav">
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="me">Me</Link></li>
-          </ul>
         </nav>
 
         <div className="container">
