@@ -4,18 +4,20 @@ body {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  opacity: 0.25;
 }
 
-.navbar-brand {
-  width: 70%;
-  height: 20px;
+.navbar img {
+  padding-top: 10px;
+  width: auto;
+  height: auto;
 }
 
-a.navbar-nav {
-  color: white !important!;
+.navbar {
+  color: white;
+  border: none !important;
+  background: transparent !important;
 }
 
-.navbar-default {
-  background-color: transparent;
+.navbar a, .navbar a:visited {
+  color: white !important;
 }

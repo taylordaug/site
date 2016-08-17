@@ -3,12 +3,13 @@ import { render } from 'react-dom'
 import { Router, Route, Link, browserHistory, IndexRoute } from 'react-router'
 import Home from './components/Home.js';
 import Me from './components/Me.js';
+import Contact from './components/Contact.js';
 
 export class App extends React.Component {
   render() {
     return (
       <div>
-        <nav className="navbar navbar-default">
+        <nav className="navbar navbar-full navbar-fixed-top navbar-default navbar-light">
           <div className="container-fluid">
 
             <div className="navbar-header">
@@ -18,14 +19,14 @@ export class App extends React.Component {
                 <span className="icon-bar"></span>
                 <span className="icon-bar"></span>
               </button>
-              <Link to="/" className="navbar-brand">
-                <img className="logo" alt='taylor-daugherty' src={require('./../images/Logo.png')}/>
+              <Link to="/" className="navbar-left">
+                <img className="logo" alt='taylor-daugherty' src={require('./../images/logo.png')}/>
               </Link>
             </div>
 
             <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul className="nav navbar-nav navbar-right">
-                <li className="active"><Link to="/">home<span className="sr-only">(current)</span></Link></li>
+                <li><Link to="/">home<span className="sr-only">(current)</span></Link></li>
                 <li><Link to="/me">me</Link></li>
                 <li className="dropdown">
                   <a href="#" className="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">portfolio <span className="caret"></span></a>
@@ -58,6 +59,7 @@ render((
     <Route path="/" component={App}>
       <IndexRoute component={Home} />
       <Route path="/me" component={Me} />
+      <Route path="/contact" component={Contact} />
     </Route>
   </Router>
 ), document.getElementById('root'))
